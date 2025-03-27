@@ -30,7 +30,7 @@
     <div class="container" style="padding-top:120px;">
         <div class="wrapper">
             <div class="home-search-container">
-                <p>Looking for something?</p>
+                <p class="home-search-text">Looking for something?</p>
                 <form>
                     <div class="search-wrapper">
                         <input><input type="image" src="img/search-icon.png" alt="Submit" id="searchButt">

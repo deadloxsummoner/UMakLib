@@ -88,6 +88,10 @@ nav div a {
     width: 70%;
 }
 
+.home-search-text {
+    font-family: 'Metropolis';
+}
+
 .home-search-container {
     background-color: #E6E6E6;
     height: 20vh;
@@ -97,6 +101,7 @@ nav div a {
     flex-direction: column;
     margin-top: 5vh;
 }
+
 
 .home-search-container p {
     font-size: 2vw;
@@ -395,6 +400,20 @@ footer div {
 .foot-div {
     border-bottom: 1px solid white;
     width: 100%;
+}
+
+
+.foot-2 {
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.foot-2 img {
+    width: 10vw;
+    height: 10vw;
+    aspect-ratio: 1/1 !important;
 }
 
 .foot-3 {

@@ -18,7 +18,10 @@
                 <a href="#">Directory </a>
             </div>
         </div>
-        <div>a</div>
+        <div class="foot-2">
+            <img src="img/umaklogo.png">
+            <img src="img/umaklogo.png">
+        </div>
         <div class="foot-3">
             <div>
                 <p>QUICK LINKS</p>
