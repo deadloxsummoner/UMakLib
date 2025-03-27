@@ -10,6 +10,10 @@
     
 }
 
+a {
+    text-decoration: none;
+}
+
 :root {
     --umakBlue: #111c4e;
 }
@@ -261,9 +265,23 @@ nav div a {
     
 }
 
-
-
 .r-container {
     width: 95%;
     margin-top: 1vh;
+}
+
+.news-room-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5vh;
+    font-family: 'Metropolis';
+    font-size: 0.8vw;
+}
+
+.news-room-wrap a {
+    color: white;
+    background-color: var(--umakBlue);
+    padding: 1.3vw 2vw;
+    margin-top: 3vh;
 }

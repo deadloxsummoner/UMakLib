@@ -104,6 +104,9 @@
                     </div>
 
                 </div>
+                <div class="news-room-wrap">
+                    <a href="#">Visit Newsroom</a>
+                </div>
             </div>
         </div>
 </body>
