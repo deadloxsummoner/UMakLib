@@ -47,7 +47,7 @@
             <img src="img/banner_1.jpeg">
         </div>
     </div>
-    <div class="container-g" style="margin-top:10vh;height:100vh">
+    <div class="container-g" style="margin-top:10vh;padding-bottom:5vh;">
         <div class="wrapper">
             <div class="news-wrapper">
                 <div class="news-container">
@@ -102,13 +102,16 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
                 <div class="news-room-wrap">
                     <a href="#">Visit Newsroom</a>
                 </div>
             </div>
         </div>
+    </div>
+    <div class="blue-banner overlay">
+        dwdw
+    </div>
 </body>
 
 </html>
