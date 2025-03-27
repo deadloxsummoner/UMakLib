@@ -341,3 +341,80 @@ nav div a {
     left: 0;
 }
 
+/* FOOTER */
+
+footer {
+    height: 50vh;
+    background-color: var(--umakBlue);
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer div {
+    width: 30%;
+    color: white;
+
+}
+
+.foot-1 {
+    font-family: 'Metropolis';
+    height: 30vh;
+}
+
+.foot-1 p {
+    line-height: 200%;
+    font-family: 'Marcellus';
+    font-size: 2vw;
+}
+
+.foot-1 p + p {
+    font-family: 'Metropolis';
+    font-size: 0.8vw;
+    text-align: left;
+}
+
+.foot-1 p + p + p {
+    margin-top: 10vh;
+}
+
+.footer-links-1 {
+    display: flex;
+   width: 100%;
+   justify-content: space-between;
+   color: white;
+   margin-top: 5vh;
+}
+
+.footer-links-1 a {
+    font-size: 1vw;
+    color: white;
+}
+
+.foot-div {
+    border-bottom: 1px solid white;
+    width: 100%;
+}
+
+.foot-3 {
+    height: 30vh;
+    font-family: 'Metropolis';
+}
+
+.foot-3 div {
+    width: 100%;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    line-height: 200%;
+}
+
+.foot-3 div p {
+    font-size: 1.5vw;
+}
+
+.foot-3 div a {
+    color: white;
+    font-weight: 300;
+}

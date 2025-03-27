@@ -115,6 +115,9 @@
             <a href="#">umak.edu.ph</a>
         </div>
     </div>
+    <?php 
+        include 'footer.php'
+    ?>
 </body>
 
 </html>
