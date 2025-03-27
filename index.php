@@ -110,7 +110,10 @@
         </div>
     </div>
     <div class="blue-banner overlay">
-        dwdw
+        <div>
+            <p>VISIT UMAK WEBSITE</p>
+            <a href="#">umak.edu.ph</a>
+        </div>
     </div>
 </body>
 

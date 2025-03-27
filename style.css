@@ -27,6 +27,7 @@ nav{
     justify-content: center;
     font-family: 'Marcellus';
     position: fixed;
+    z-index: 999999;
 }
 
 nav div {
@@ -291,7 +292,37 @@ nav div a {
     background-image: url(img/banner_3.jpg);
     background-position: center;
     background-size: cover;
+    color: white !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
    
+}
+
+.blue-banner div {
+    width: 40%;
+    font-family: 'Metropolis';
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.blue-banner div p {
+    position: relative;
+    font-size: 3vw;
+    z-index: 5;
+}
+
+.blue-banner div a{
+    z-index: 5;
+    color: white !important;
+    border: 2px solid white;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 3px;
+    font-size: 2vw;
 }
 
 .overlay {
@@ -309,3 +340,4 @@ nav div a {
     top: 0;
     left: 0;
 }
+
