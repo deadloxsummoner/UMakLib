@@ -12,7 +12,7 @@
             <a href="#">About Us</a>
             <a href="#">News</a>
             <a href="#">Help</a>
-            <a href="#">My Account</a>
+            <a href="login.php">My Account</a>
         </div>
     </div>
 </nav>

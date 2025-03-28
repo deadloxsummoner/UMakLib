@@ -636,3 +636,95 @@ footer div {
 .book-details-wrap {
     margin-top: 2vh;
 }
+
+.add-to-cart {
+    background-color: var(--umakBlue);
+    color: white;
+    display: flex;
+    width: 30%;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 3vh;
+    padding: 1vw 1.5vw;
+    font-size: 1vw;
+}
+
+#addToCart {
+    scale: 1;
+}
+
+.login-form {
+    border: 1px solid #cacaca;
+    width: 40%;
+    text-align: center;
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Metropolis';
+}
+
+.login-container {
+    height: 80%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-head {
+    font-size: 2vw;
+    color: var(--umakBlue);
+    font-weight: bolder;
+}
+
+.input-wrap {
+    text-align: left;
+    width: 100%;
+    margin-top: 2vh;
+}
+
+.input-wrap p {
+    font-size: 0.8vw;
+    color: var(--umakBlue);
+    font-weight: bolder;
+    padding: 1vh 2vh;
+}
+
+.input-wrap input {
+    width: 100%;
+    border: 1px solid #cacaca;
+    border-radius: 0.8vw;
+    height: 4vh;
+    
+}
+
+.login-inputs {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 10vh;
+    justify-content: space-between;
+    margin-top: 5vh;
+}
+
+.forgot-pass {
+    color: #5a5a5a;
+    font-size: 0.8vw;
+    text-align: right;
+    width: 100%;
+    margin-top: 1vh;
+    text-decoration: underline;
+}
+
+#login-butt {
+    background-color: var(--umakBlue);
+    color: white;
+    border: none;
+    font-size: 1.5vw;
+    font-weight: bolder;
+    padding: .5vw 2vw;
+    border-radius:1.5vw;
+    margin-top: 5vh;
+}

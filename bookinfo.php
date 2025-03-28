@@ -22,6 +22,7 @@ if (isset($_GET['id'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UMAKLib</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 </head>
 
 <body>
@@ -55,7 +56,12 @@ if (isset($_GET['id'])) {
                     CALL NO:
                     <p> <?= $book['book_callno'] ?></p>
                 </div>
+
+                <a href="<?= $book['id'] ?>" class="add-to-cart">
+                    <box-icon name='cart' color='#ffffff' id="addToCart"></box-icon> Add to Cart
+                </a>
             </div>
+
         </div>
 
         <div class="summary-wrapper">
