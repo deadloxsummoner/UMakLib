@@ -441,7 +441,8 @@ footer div {
 .result-container {
     width: 100%;
     border: solid 1px #CACACA;
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
 }
 
 .search-wrapper  {
@@ -494,4 +495,78 @@ footer div {
     font-weight:bolder;
     color: #111c4e;
     font-size: 1.8vw;
+}
+
+.result-bar-container {
+    width: 95%;
+    display: flex;
+}
+
+.result-bar-img {
+    width: 10vw;
+    aspect-ratio: 1/1;
+    background-color: #939393   ;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat    ;
+}
+
+.result-bar-info {
+    margin-left:2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.result-bar-titles {
+
+}
+
+.result-bar-titles p {
+    font-size: 2vw;
+    color: var(--umakBlue);
+    font-weight: bolder;
+}
+
+.result-bar-titles p + p {
+    font-size: 1vw;
+    color: var(--umakBlue);
+    font-weight: 300;
+}
+
+.open-result-bar {
+    width: calc(70% + 5vh);
+    margin-top: 1%;
+    border: #CACACA solid 1PX;
+    padding: 2vh 0;
+    display: flex;
+    justify-content: center;
+    transition: 0.2s;
+}
+
+.open-result-bar:hover {
+    transform: translateY(-1vh);
+    box-shadow: #CACACA 1px 10px ;
+}
+
+.result-bar-subtitle {
+    color: black;
+    display: flex;
+    justify-content: space-between;
+}
+
+.result-bar-sub-head {
+    font-weight: bolder;
+}
+
+.result-bar-sub-head-2 {
+    font-size: 1vw;
+}
+
+.sub-head-bar-2 {
+    display: flex;
+    flex-direction: row;
+    width: 40%;
+    justify-content: space-between;
 }

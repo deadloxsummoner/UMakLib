@@ -11,24 +11,9 @@
 </head>
 
 <body>
-    <nav>
-        <div class="nav-wrapper">
-            <div>
-                <img src="img/umaklogo.png" class="umaklogo">
-                <h1>University Of Makati</h1>
-            </div>
-            <div id="nav-buttons">
-                <a href="#">Home</a>
-                <a href="#">Resources</a>
-                <a href="#">Digital Library</a>
-                <a href="#">Services</a>
-                <a href="#">About Us</a>
-                <a href="#">News</a>
-                <a href="#">Help</a>
-                <a href="#">My Account</a>
-            </div>
-        </div>
-    </nav>
+    <?php
+    include 'navbar.php';
+    ?>
     <div class="container" style="padding-top:120px;">
         <div class="wrapper">
             <div class="result-container">
@@ -72,10 +57,33 @@
                         if (mysqli_num_rows($result) > 0) {
                             foreach ($result as $result_row) {
                         ?>
-                                <div class="result-bar-container">
-                                    <div class="result-bar-img" style="background-image: url(<?= ?>);"></div>
-                                    <div></div>
-                                </div>
+                                <a href="bookinfo.php?id=<?= $result_row['id'] ?>" class="open-result-bar">
+                                    <div class="result-bar-container">
+                                        <div class="result-bar-img" style="background-image: url(book_cover/<?= $result_row['book_cover'] ?>);"></div>
+                                        <div class="result-bar-info">
+                                            <div class="result-bar-titles">
+                                                <p class="book-title"><?= $result_row['book_name'] ?></p>
+                                                <p class="book-author"><?= $result_row['book_author'] ?></p>
+                                            </div>
+                                            <div class="result-bar-subtitle">
+                                                <div>
+                                                    <p class="result-bar-sub-head">RATING</p>
+                                                    <p class="result-bar-sub-head-2"><?= $result_row['book_rating'] ?>/5.0</p>
+                                                </div>
+                                                <div class="sub-head-bar-2">
+                                                    <div>
+                                                        <p class="result-bar-sub-head">CALL NO.</p>
+                                                        <p class="result-bar-sub-head-2"><?= $result_row['book_callno'] ?>/5.0</p>
+                                                    </div>
+                                                    <div>
+                                                        <p class="result-bar-sub-head">STATUS</p>
+                                                        <p class="result-bar-sub-head-2"><?= $result_row['book_status'] ?>/5.0</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
                     <?php
 
 
