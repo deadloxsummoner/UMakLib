@@ -570,3 +570,69 @@ footer div {
     width: 40%;
     justify-content: space-between;
 }
+
+.book-info-container {
+    margin-top: 2%;
+    border:1px solid #cacaca;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.book-info-cover {
+    padding: 2vw;
+    width: auto;
+}
+
+
+.book-cover {
+    width: 25vw;
+    aspect-ratio: 3/4;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.book-info-titles {
+    width: 45%;
+    margin-left:2%;
+    margin-top: 1vh;
+    font-family: 'Metropolis';
+}
+
+.book-info-wrapper {
+    width: 70%;
+    display: flex;
+}
+
+.book-info-head {
+    font-size: 2vw;
+    font-weight: bolder;
+}
+
+.book-info-subhead {
+    font-weight: bolder;
+    display: inline-block;
+    display: flex;
+    margin-top: 1.5vh;
+}
+
+.book-info-subhead p {
+    font-weight: 300;  
+    margin-left: 1%;
+}
+
+.summary-wrapper {
+    font-family: 'Metropolis';
+    width: 70%;
+    margin-top: 2vh;
+}
+
+.book-summary {
+    margin-top:1vh;
+    line-height: 200%;
+}
+
+.book-details-wrap {
+    margin-top: 2vh;
+}
