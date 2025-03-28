@@ -27,16 +27,44 @@ include 'database.php';
                 <div class="login-inputs">
                     <div class="input-wrap">
                         <p>USERNAME</p>
-                        <input>
+                        <input type="text" name="username">
                     </div>
                     <div class="input-wrap">
                         <p>PASSWORD</p>
-                        <input type="password">
+                        <input type="password" name="password">
                     </div>
                     <a href="#" class="forgot-pass">Forgot password?</a>
                     <input type="submit" id="login-butt" value="SIGN IN">
                     <a href="#" class="forgot-pass" style="text-align:center;">Create account</a>
+                    <?php
+                    ini_set('display_errors', 'Off');
+                    if ($_SESSION["logged_user"] !== null) {
+                    } //if admin is already logged in
+
+                    $username = $_POST["username"];
+                    $userpass = $_POST["password"];
+
+                    $gett = "SELECT * FROM logindata WHERE username = '$username'";
+                    $result = mysqli_query($conn, $gett);
+
+                    if (mysqli_num_rows($result) > 0) {
+                        $row = mysqli_fetch_assoc($result);
+                        $user_result = $row["username"];
+                        $pass_result = $row["password"];
+                    }
+                    if (isset($username, $userpass)) {
+                        if ($username == null && $userpass == null) {
+                            echo "<br><p id=\"warning\">please enter username and password</p>";
+                        } else if ($username != $user_result && $userpass != $pass_result) {
+                            echo "<br><p id=\"warning\">wrong username or password</p>";
+                        } else if ($username == $user_result && $userpass == $pass_result) {
+                            $_SESSION["logged_user"] = $user_result;
+                            header("location:account.php");
+                        }
+                    }
+                    ?>
                 </div>
+
             </div>
         </form>
     </div>
