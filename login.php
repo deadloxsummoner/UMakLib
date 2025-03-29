@@ -1,7 +1,6 @@
 <?php
 include 'database.php';
-
-
+session_start();
 
 ?>
 
@@ -38,8 +37,6 @@ include 'database.php';
                     <a href="#" class="forgot-pass" style="text-align:center;">Create account</a>
                     <?php
                     ini_set('display_errors', 'Off');
-                    if ($_SESSION["logged_user"] !== null) {
-                    } //if admin is already logged in
 
                     $username = $_POST["username"];
                     $userpass = $_POST["password"];
@@ -51,6 +48,7 @@ include 'database.php';
                         $row = mysqli_fetch_assoc($result);
                         $user_result = $row["username"];
                         $pass_result = $row["password"];
+                        $user_id = $row["id"];
                     }
                     if (isset($username, $userpass)) {
                         if ($username == null && $userpass == null) {
@@ -59,6 +57,7 @@ include 'database.php';
                             echo "<br><p id=\"warning\">wrong username or password</p>";
                         } else if ($username == $user_result && $userpass == $pass_result) {
                             $_SESSION["logged_user"] = $user_result;
+                            $_SESSION["user_ID"] = $user_id;
                             header("location:account.php");
                         }
                     }
