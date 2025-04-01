@@ -475,6 +475,10 @@ footer div {
     width: 100%;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    width: calc(70% + 4vw);
+    justify-self: center;
+    margin-top: 1%;
 }
 
 .search-filter-dropdown {
@@ -881,4 +885,17 @@ footer div {
     align-self: flex-start;
     font-family: 'Metropolis';
 
+}
+
+.add-book-butt {
+    display: flex   ;
+    align-items: center;
+    font-size:1.5vw;
+    font-family: 'Metropolis';
+   
+}
+
+.add-book-butt a {
+    text-decoration: none;
+    color: #5a5a5a!important;
 }

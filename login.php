@@ -54,6 +54,7 @@ session_start();
                         $user_result = $row["username"];
                         $pass_result = $row["password"];
                         $id_result = $row['id'];
+                        $user_type = $row['type'];
                     }
                     if (isset($username, $userpass)) {
                         if ($username == null && $userpass == null) {
@@ -63,6 +64,7 @@ session_start();
                         } else if ($username == $user_result && $userpass == $pass_result) {
                             $_SESSION["logged_user"] = $user_result;
                             $_SESSION["user_id"] = $id_result;
+                            $_SESSION["user_type"] = $user_type;
                             header("location:account.php");
                         }
                     }
