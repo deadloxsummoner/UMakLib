@@ -661,6 +661,7 @@ footer div {
     margin-top: 3vh;
     padding: 1vw 1.5vw;
     font-size: 1vw;
+    cursor: pointer!important;
 }
 
 #addToCart {
@@ -874,3 +875,10 @@ footer div {
     gap: 5%;
 }
 
+.logout-butt {
+    height: auto;
+    margin-left: 40%;
+    align-self: flex-start;
+    font-family: 'Metropolis';
+
+}

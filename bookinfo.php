@@ -1,5 +1,10 @@
 <?php
+ini_set('display_errors', 'Off');
 include 'database.php';
+session_start();
+
+
+$userId = $_SESSION["user_id"];
 
 if (isset($_GET['id'])) {
     $book_id = mysqli_real_escape_string($conn, $_GET['id']);
@@ -10,6 +15,11 @@ if (isset($_GET['id'])) {
         $book = mysqli_fetch_array($query_run);
     }
 }
+
+
+$alr_borrowed = "SELECT * FROM booklog WHERE borrow_id = '$userId' AND book_id = '$book_id'";
+$alr_run = mysqli_query($conn, $alr_borrowed);
+
 
 
 ?>
@@ -57,9 +67,30 @@ if (isset($_GET['id'])) {
                     <p> <?= $book['book_callno'] ?></p>
                 </div>
 
-                <a href="<?= $book['id'] ?>" class="add-to-cart">
+                <a class="add-to-cart" href="<?php if (isset($_SESSION["logged_user"])) {
+                                                    if (mysqli_num_rows($alr_run) > 0) {
+                                                        echo "#";
+                                                    } else {
+                                                        $_SESSION["borrow_id"] = $userId;
+                                                        $_SESSION["book_id"] = $book_id;
+
+                                                        echo "bookSys.php";
+                                                    }
+                                                } else {
+                                                    echo "login.php";
+                                                } ?>">
                     <box-icon name='cart' color='#ffffff' id="addToCart"></box-icon> Add to Cart
                 </a>
+                <br>
+                <?php
+                if (isset($_SESSION["logged_user"])) {
+                    if (mysqli_num_rows($alr_run) > 0) {
+                        echo "already borrowed";
+                    }
+                } else {
+                    echo "login to add";
+                }
+                ?>
             </div>
 
         </div>

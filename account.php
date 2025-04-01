@@ -48,17 +48,31 @@ if (isset($_SESSION["user_id"])) {
                         <div class="user-sub-head">YR & SECTION: <?= $user["student_section"] ?></div>
                         <div class="user-sub-head">GENDER: <?= $user["gender"] ?></div>
                     </div>
+                    <div class="logout-butt"><a href="logout.php">LOGOUT</a></div>
                 </div>
                 <div class="account-divider"></div>
                 <div class="user-head" style="margin-top: 2%;">BORROWED</div>
                 <div class="borrowed-wrapper">
                     <?php
-                    $search_query = "SELECT * FROM bookinfo WHERE 1=1 ";
+
+                    $borrow_query = "SELECT * FROM booklog WHERE borrow_id = $user_id";
+                    $borrow_result = mysqli_query($conn, $borrow_query);
+
+                    if (mysqli_num_rows($borrow_result) > 0) {
+                        foreach ($borrow_result as $borrow) {
+                        }
+                    }
+
+                    $search_query = "SELECT *
+                                    FROM bookinfo
+                                    JOIN booklog ON bookinfo.id = booklog.book_id
+                                    JOIN logindata ON booklog.borrow_id = logindata.id
+                                    WHERE logindata.id = {$user_id};";
 
 
 
                     if (!isset($_POST['search-bar-filter'])) {
-                        $search_query .= " LIMIT 5";
+
                         $result = mysqli_query($conn, $search_query);
 
                     ?>
