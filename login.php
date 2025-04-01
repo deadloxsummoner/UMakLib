@@ -2,6 +2,7 @@
 include 'database.php';
 session_start();
 
+
 ?>
 
 <!DOCTYPE html>
@@ -41,6 +42,10 @@ session_start();
                     $username = $_POST["username"];
                     $userpass = $_POST["password"];
 
+                    if (isset($_SESSION["logged_user"])) {
+                        header("location:account.php");
+                    }
+
                     $gett = "SELECT * FROM logindata WHERE username = '$username'";
                     $result = mysqli_query($conn, $gett);
 
@@ -48,7 +53,7 @@ session_start();
                         $row = mysqli_fetch_assoc($result);
                         $user_result = $row["username"];
                         $pass_result = $row["password"];
-                        $user_id = $row["id"];
+                        $id_result = $row['id'];
                     }
                     if (isset($username, $userpass)) {
                         if ($username == null && $userpass == null) {
@@ -57,7 +62,7 @@ session_start();
                             echo "<br><p id=\"warning\">wrong username or password</p>";
                         } else if ($username == $user_result && $userpass == $pass_result) {
                             $_SESSION["logged_user"] = $user_result;
-                            $_SESSION["user_ID"] = $user_id;
+                            $_SESSION["user_id"] = $id_result;
                             header("location:account.php");
                         }
                     }

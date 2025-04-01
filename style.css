@@ -1,9 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Marcellus&display=swap');
 
+
+@font-face {
+    font-family: 'Metropolis-Bold';
+    src: url('font/Metropolis-Bold.otf');
+}
+
 @font-face {
     font-family: 'Metropolis';
     src: url('font/Metropolis-Regular.otf') ;
 }
+
+
+
+
 * {
     padding: 0;
     margin: 0;
@@ -42,7 +52,8 @@ nav div h1 {
 
 nav div a {
     text-decoration: none;
-    font-family: 'Metropolis';
+    font-family: 'Metropolis-Bold';
+    font-weight: bold;
     color: white;
     font-size: 1.3vw;
 }
@@ -452,10 +463,12 @@ footer div {
 #searchFilter {
     width: 70%;
     height: 5vh;
+    text-align: center; 
 }
 
 #searchFilter:focus {
     outline: none;
+    text-align: center;
 }
 
 .filter-wrapper {
@@ -539,10 +552,11 @@ footer div {
     width: calc(70% + 5vh);
     margin-top: 1%;
     border: #CACACA solid 1PX;
-    padding: 2vh 0;
+    padding: 5vh 0;
     display: flex;
     justify-content: center;
     transition: 0.2s;
+
 }
 
 .open-result-bar:hover {
@@ -728,3 +742,135 @@ footer div {
     border-radius:1.5vw;
     margin-top: 5vh;
 }
+
+.user-acc-wrapper {
+    border: 1px solid #cacaca;
+    width: 70%;
+    max-height: 100vh;
+    height: calc(100vh - 120px);
+    display: flex;
+    justify-content: center;
+}
+
+.user-acc-container {
+    width: 90%;
+    height: calc(100vh - 120px);
+}
+
+.account-info-container {
+    display: flex;
+    column-gap: 3%;
+    padding-top: 5vh;
+    align-items: center;
+}
+
+.user-info{
+    height: auto;
+}
+
+.user-head {
+    font-weight:BOLDER;
+    font-size: 1.2vw    ;
+    font-family: 'Metropolis-Bold';
+}
+
+.user-sub-head {
+    font-family: 'Metropolis';
+    text-transform: uppercase;
+    margin-top: 3%;
+}
+
+.user-profile {
+    width: 12vw;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
+
+.account-divider {
+    width: 100%;
+    border-bottom: 1px solid #cacaca;
+    margin-top: 3%;
+}
+
+.open-borrow-bar {
+    margin-top: 5%!important;
+    border: #cacaca 1px solid!important;
+    display: flex;
+    width: 100%;
+    font-family: 'Metropolis';
+    width: 100vw;
+}
+
+.borrow-bar-container {
+    width: 52vw;
+    display: flex;
+    height: 15vh;
+    scrollbar-color: red green;
+
+}
+
+.borrow-bar-img {
+    width: 10vw;
+    aspect-ratio: 1/1;
+    background-color: #939393   ;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat    ;
+}
+
+.borrow-bar-info {
+    margin-left:2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.borrow-bar-titles p {
+    font-size: 2vw;
+    color: var(--umakBlue);
+    font-weight: bolder;
+}
+
+.borrow-bar-titles p + p {
+    font-size: 1vw;
+    color: var(--umakBlue);
+    font-weight: 300;
+}
+
+.borrow-result-bar {
+    width: calc(70% + 5vh);
+    margin-top: 1%;
+    border: #CACACA solid 1PX;
+    padding: 2vh 0;
+    display: flex;
+    justify-content: center;
+    transition: 0.2s;
+}
+
+.borrow-result-bar:hover {
+    transform: translateY(-1vh);
+    box-shadow: #CACACA 1px 10px ;
+}
+
+.borrow-bar-subtitle {
+    color: black;
+    display: flex;
+    justify-content: space-between;
+}
+
+.borrow-bar-sub-head {
+    font-weight: bolder;
+}
+
+.borrow-bar-sub-head-2 {
+    font-size: 1vw;
+}
+
+.borrowed-wrapper {
+    display: flex;
+    overflow: auto;
+    width: auto;
+    gap: 5%;
+}
+
