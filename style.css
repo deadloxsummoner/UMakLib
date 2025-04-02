@@ -884,6 +884,8 @@ footer div {
     margin-left: 40%;
     align-self: flex-start;
     font-family: 'Metropolis';
+    text-align: right;
+    width: 12%;
 
 }
 
@@ -898,4 +900,75 @@ footer div {
 .add-book-butt a {
     text-decoration: none;
     color: #5a5a5a!important;
+}
+
+.book-add-input-wrapper {
+    text-transform: uppercase;
+    font-family: 'Metropolis';
+    margin-top: 1%;
+}
+
+.book-add-input-wrapper p {
+    font-weight: bold;
+}
+
+.book-add-input-wrapper input:focus {
+    outline: none;
+    border: var(--umakBlue) 3px solid;
+}
+
+#addBookButt {
+    background-color: var(--umakBlue);
+    border: none;
+    color: white;
+    padding: 1vw 3vw;
+    margin-top: 3%;
+}
+
+#add-book-container {
+    display: flex;
+}
+
+#add-book-container .open-result-bar {
+    width: 80%;
+}
+
+.preview-con {
+    width: 80% ;
+}
+
+.book-log {
+    margin-top: 3%;
+    width: 100%;
+}
+
+.borrow-log-wrapper {
+    width: 70%;
+}
+
+.borrowed-table {
+    width: 100%;
+    margin-top: 3vh;
+}
+
+table.borrowed-table {
+    width: 100%;
+    border-collapse: collapse; 
+    margin-top: 20px;
+}
+
+
+table.borrowed-table th {
+    background-color: #4CAF50; 
+    color: white; 
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd; 
+}
+
+
+table.borrowed-table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd; 
 }

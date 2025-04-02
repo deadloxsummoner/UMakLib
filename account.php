@@ -48,7 +48,14 @@ if (isset($_SESSION["user_id"])) {
                         <div class="user-sub-head">YR & SECTION: <?= $user["student_section"] ?></div>
                         <div class="user-sub-head">GENDER: <?= $user["gender"] ?></div>
                     </div>
-                    <div class="logout-butt"><a href="logout.php">LOGOUT</a></div>
+                    <div class="logout-butt">
+                        <a href="logout.php">LOGOUT</a><br><br>
+                       <?php if($_SESSION['user_type'] == 'admin'){
+                        ?>
+                             <a href="booklog.php" class="book-log">BOOK LOG</a>
+                        <?php
+                       }?>
+                    </div>
                 </div>
                 <div class="account-divider"></div>
                 <div class="user-head" style="margin-top: 2%;">BORROWED</div>
@@ -99,11 +106,11 @@ if (isset($_SESSION["user_id"])) {
                                                 <div class="sub-head-bar-2">
                                                     <div>
                                                         <p class="borrow-bar-sub-head">CALL NO.</p>
-                                                        <p class="borrow-bar-sub-head-2"><?= $result_row['book_callno'] ?>/5.0</p>
+                                                        <p class="borrow-bar-sub-head-2"><?= $result_row['book_callno'] ?></p>
                                                     </div>
                                                     <div>
                                                         <p class="borrow-bar-sub-head">STATUS</p>
-                                                        <p class="borrow-bar-sub-head-2"><?= $result_row['book_status'] ?>/5.0</p>
+                                                        <p class="borrow-bar-sub-head-2"><?= $result_row['book_status'] ?></p>
                                                     </div>
                                                 </div>
                                             </div>

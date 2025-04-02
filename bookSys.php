@@ -25,7 +25,7 @@ $bookId = $_SESSION["book_id"];
 
 
 
-$insert_query = "INSERT INTO booklog values('', $borrowId,$bookId)";
+$insert_query = "INSERT INTO booklog values('', $borrowId,$bookId,'PENDING')";
 $insert = mysqli_query($conn, $insert_query);
 $temp = $bookId;
 unset($_SESSION["borrow_id"]);

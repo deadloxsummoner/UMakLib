@@ -17,7 +17,7 @@ if (isset($_GET['id'])) {
 }
 
 
-$alr_borrowed = "SELECT * FROM booklog WHERE borrow_id = '$userId' AND book_id = '$book_id'";
+$alr_borrowed = "SELECT * FROM booklog WHERE borrow_id = '$userId' AND book_id = '$book_id' AND book_status ='APPROVED' AND book_status ='PENDING'";
 $alr_run = mysqli_query($conn, $alr_borrowed);
 
 

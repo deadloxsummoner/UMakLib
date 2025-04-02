@@ -87,7 +87,7 @@ ini_set('display_errors', 'Off');
                                                 <div class="sub-head-bar-2">
                                                     <div>
                                                         <p class="result-bar-sub-head">CALL NO.</p>
-                                                        <p class="result-bar-sub-head-2"><?= $result_row['book_callno'] ?>/5.0</p>
+                                                        <p class="result-bar-sub-head-2"><?= $result_row['book_callno'] ?></p>
                                                     </div>
                                                     <div>
                                                         <p class="result-bar-sub-head">STATUS</p>
@@ -139,7 +139,7 @@ ini_set('display_errors', 'Off');
                                                 <div class="sub-head-bar-2">
                                                     <div>
                                                         <p class="result-bar-sub-head">CALL NO.</p>
-                                                        <p class="result-bar-sub-head-2"><?= $result_row['book_callno'] ?>/5.0</p>
+                                                        <p class="result-bar-sub-head-2"><?= $result_row['book_callno'] ?></p>
                                                     </div>
                                                     <div>
                                                         <p class="result-bar-sub-head">STATUS</p>
